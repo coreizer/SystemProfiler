@@ -28,7 +28,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Computer Specifications")]
-[assembly: AssemblyCopyright("© SummerChroma 2018")]
+[assembly: AssemblyCopyright("© SummerChroma 2018-2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
