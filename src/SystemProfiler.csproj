@@ -93,6 +93,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app-icon.ico" />
+    <None Include="Resources\windows_11.png" />
+    <None Include="Resources\windows_10.png" />
     <None Include="Resources\windows_8.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

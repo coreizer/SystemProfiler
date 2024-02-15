@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (c) 2018-2019 AlphaNyne
+ * Copyright (c) 2018 2024 coreizer
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,79 +33,16 @@ namespace SystemProfiler
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-
-
-
-            //var a = new ManagementClass("Win32_OperatingSystem");
-            //var b = a.GetInstances();
-
-            //foreach(var aa in b) {
-            //    Trace.WriteLine(aa.)
-            //}
-
-
-            //ManagementObjectSearcher objectSearcher = new ManagementObjectSearcher("Win32_OperatingSystem", $"select * from {query}");
-
-            //foreach (ManagementBaseObject data in objectSearcher.Get()) {
-            //    //if (data[name] != null) {
-            //    //    return data[name].ToString();
-            //    //}
-            //}
-
-
-            this.UseWaitCursor = true;
-
-            try {
-                //this.textBoxOSName.Text = this.Searcher("Win32_OperatingSystem", "Name").Split('|')[0];
-
-                //// Motherboard
-                //string memorySize = this.Searcher("Win32_OperatingSystem", "TotalVisibleMemorySize");
-                //this.textBoxProcessName.Text = this.Searcher("Win32_Processor", "Name");
-                //this.textBoxProcessCore.Text = this.Searcher("Win32_Processor", "NumberOfCores");
-                //this.textBoxRam.Text = ByteSize.FromKiloBytes(double.Parse(memorySize)).ToString();
-
-                //// Graphic
-                //string adapterRAM = this.Searcher("Win32_VideoController", "AdapterRAM");
-                //this.textBoxVideoName.Text = this.Searcher("Win32_VideoController", "Name");
-                //this.textBoxVideoRam.Text = ByteSize.FromBytes(double.Parse(adapterRAM)).ToString();
-
-                //this.textBoxMonitor.Text = $"{Screen.PrimaryScreen.Bounds.Width} x {Screen.PrimaryScreen.Bounds.Height}";
-                //this.textBoxMonitorPrimary.Text = this.Searcher("Win32_DesktopMonitor", "Description");
-            }
-            catch (Exception ex) {
-                MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally {
-                this.UseWaitCursor = false;
-            }
-        }
-
-        private string Searcher(string query, string name, string scope = null)
-        {
-            ManagementObjectSearcher objectSearcher = new ManagementObjectSearcher(scope, $"select * from {query}");
-
-            foreach (ManagementBaseObject data in objectSearcher.Get()) {
-                if (data[name] != null) {
-                    return data[name].ToString();
-                }
-            }
-
-            return "";
-        }
-
         private void printScreenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try {
-                SaveFileDialog SFD = new SaveFileDialog {
+                var SFD = new SaveFileDialog {
                     FileName = DateTime.Now.ToString("yyyy-MM-dd"),
                     Filter = "*.png|*.png"
                 };
 
                 if (SFD.ShowDialog(this) == DialogResult.OK) {
-                    using (Bitmap bmp = new Bitmap(this.Width, this.Height)) {
+                    using (var bmp = new Bitmap(this.Width, this.Height)) {
                         this.DrawToBitmap(bmp, new Rectangle(0, 0, this.Width, this.Height));
                         bmp.Save(SFD.FileName);
                         bmp.Dispose();
@@ -126,14 +63,9 @@ namespace SystemProfiler
                 this.VideoController()
                 );
             }
-            catch {
-                MessageBox.Show("Hello world");
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private async Task Processor()
@@ -147,7 +79,7 @@ namespace SystemProfiler
                     }
                 }
 
-                Trace.WriteLine("End Processor");
+                Trace.WriteLine("Processor: OK");
             });
         }
 
@@ -162,7 +94,7 @@ namespace SystemProfiler
                     }
                 }
 
-                Trace.WriteLine("End VideoController");
+                Trace.WriteLine("VideoController: OK");
             });
         }
 
@@ -177,7 +109,7 @@ namespace SystemProfiler
                     }
                 }
 
-                Trace.WriteLine("End BaseBoard");
+                Trace.WriteLine("BaseBoard: OK");
             });
         }
 
@@ -193,7 +125,7 @@ namespace SystemProfiler
                     }
                 }
 
-                Trace.WriteLine("End OperatingSystem");
+                Trace.WriteLine("OperatingSystem: OK");
             });
         }
     }

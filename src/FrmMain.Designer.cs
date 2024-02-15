@@ -49,7 +49,6 @@ namespace SystemProfiler
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ツールToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelOSName = new System.Windows.Forms.Label();
             this.labelOSNameValue = new System.Windows.Forms.Label();
             this.labelProcessorValue = new System.Windows.Forms.Label();
@@ -62,6 +61,9 @@ namespace SystemProfiler
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.ヘルプToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gitHubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +71,8 @@ namespace SystemProfiler
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ツールToolStripMenuItem});
+            this.ツールToolStripMenuItem,
+            this.ヘルプToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(620, 24);
@@ -90,16 +93,6 @@ namespace SystemProfiler
             this.printScreenToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.printScreenToolStripMenuItem.Text = "スクリーンショット";
             this.printScreenToolStripMenuItem.Click += new System.EventHandler(this.printScreenToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SystemProfiler.Properties.Resources.windows_8;
-            this.pictureBox1.Location = new System.Drawing.Point(177, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(286, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
             // 
             // labelOSName
             // 
@@ -215,6 +208,30 @@ namespace SystemProfiler
             this.label10.TabIndex = 27;
             this.label10.Text = "プロダクトキー : ";
             // 
+            // ヘルプToolStripMenuItem
+            // 
+            this.ヘルプToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gitHubToolStripMenuItem});
+            this.ヘルプToolStripMenuItem.Name = "ヘルプToolStripMenuItem";
+            this.ヘルプToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.ヘルプToolStripMenuItem.Text = "ヘルプ";
+            // 
+            // gitHubToolStripMenuItem
+            // 
+            this.gitHubToolStripMenuItem.Name = "gitHubToolStripMenuItem";
+            this.gitHubToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.gitHubToolStripMenuItem.Text = "GitHub";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SystemProfiler.Properties.Resources.windows_11;
+            this.pictureBox1.Location = new System.Drawing.Point(177, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(286, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -268,6 +285,8 @@ namespace SystemProfiler
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ToolStripMenuItem ヘルプToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gitHubToolStripMenuItem;
     }
 }
 
