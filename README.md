@@ -1,5 +1,5 @@
 # SystemProfiler
 
-[![Build Status](https://travis-ci.org/coreizer/Computer-Specifications.svg?branch=master)](https://travis-ci.org/AlphaNyne/Computer-Specifications)
+[![Build status](https://ci.appveyor.com/api/projects/status/h3f7m4hjigqo35fv?svg=true)](https://ci.appveyor.com/project/coreizer/systemprofiler)
 
 ![ScreenShot](docs/app.png)
