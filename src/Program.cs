@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (c) 2018-2019 AlphaNyne
+ * Copyright (c) 2018 2024 coreizer
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,22 +15,22 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-using System;
-using System.Windows.Forms;
-
-namespace ComputerSpecifications
+namespace SystemProfiler
 {
-  static class Program
-  {
-    /// <summary>
-    /// アプリケーションのメイン エントリ ポイントです。
-    /// </summary>
-    [STAThread]
-    static void Main()
+    using System;
+    using System.Windows.Forms;
+
+    static class Program
     {
-      Application.EnableVisualStyles();
-      Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new FrmMain());
+        /// <summary>
+        /// アプリケーションのメイン エントリ ポイントです。
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FrmMain());
+        }
     }
-  }
 }

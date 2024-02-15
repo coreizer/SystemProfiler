@@ -6,11 +6,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CCA9E8DA-895A-4E83-85F3-7FB19F0065DE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ComputerSpecifications</RootNamespace>
-    <AssemblyName>ComputerSpecifications</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <RootNamespace>SystemProfiler</RootNamespace>
+    <AssemblyName>SystemProfiler</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ComputerSpecifications.Program</StartupObject>
+    <StartupObject>SystemProfiler.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>app-icon.ico</ApplicationIcon>
@@ -92,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app-icon.ico" />
+    <None Include="Resources\windows_8.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

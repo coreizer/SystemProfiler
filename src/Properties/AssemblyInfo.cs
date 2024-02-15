@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (c) 2018 AlphaNyne
+ * Copyright (c) 2018 2024 coreizer
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,20 +15,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-using System.Resources;
 using System.Reflection;
-using System.Runtime.CompilerServices;
+using System.Resources;
 using System.Runtime.InteropServices;
 
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
-[assembly: AssemblyTitle("Computer Specifications")]
+[assembly: AssemblyTitle("System Profiler")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Computer Specifications")]
-[assembly: AssemblyCopyright("© SummerChroma 2018-2019")]
+[assembly: AssemblyProduct("System Profiler")]
+[assembly: AssemblyCopyright("© 2018-2024 coreizer")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
